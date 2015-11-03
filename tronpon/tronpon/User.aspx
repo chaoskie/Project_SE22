@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="tronpon.User" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Account.Master" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="tronpon.User" %>
 
 <!DOCTYPE html>
 
