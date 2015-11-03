@@ -22,16 +22,16 @@ namespace Tronpon_Classes
         /// </summary>
         /// <param name="userid">The ID as stored in the database</param>
         /// <returns>A list of all the images</returns>
-        public static List<Image> GetUserImages(int ID)
+        public static List<Image> GetUserImages(int userID)
         {
             //TODO: fire a query at the database, yielding all the results for images
             return new List<Image>();
         }
 
-        public static Image AddImage(int id, string url)
+        public Image AddImage(int userID, string url)
         {
             //TODO: fire an insert query at the database, adding the new image
-            return new Image(id, url);
+            return new Image(userID, url);
         }
     }
 }

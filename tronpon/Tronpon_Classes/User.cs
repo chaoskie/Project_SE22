@@ -24,7 +24,7 @@ namespace Tronpon_Classes
 
             ListFavourites = Favourite.GetUserFavourites(this.UserID);
             ListImages = Image.GetUserImages(this.UserID);
-            ListOwnComments = new List<Comment>();
+            ListOwnComments = Comment.GetUserComments(this.UserID);
         }
 
         /// <summary>
@@ -40,8 +40,10 @@ namespace Tronpon_Classes
             //Add image to the database
             Image.AddImage(this.UserID, url);
 
+
+
             bool finished = false;
-            errorMessage = "Not niet afgemaakt!";
+            errorMessage = "Nog niet afgemaakt!";
             return finished;
         }
 
@@ -50,13 +52,11 @@ namespace Tronpon_Classes
         /// </summary>
         /// <param name="imageID">The ID of targeted image</param>
         /// <param name="text">The text of the comment</param>
-        /// <param name="errorMessage">Message of the error</param>
         /// <returns>Whether there has been an error or not</returns>
-        public bool PostComment(int imageID, string text, out string errorMessage)
+        public bool PostComment(int imageID, string text)
         {
-            bool finished = false;
-            errorMessage = "Not niet afgemaakt!";
-            return finished;
+            ListOwnComments.Add(new Comment(this.UserID, imageID, text));
+            return Comment.PostComment(this.UserID, imageID, text);
         }
     }
 }
