@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Tronpon_Classes
 {
-    public class Class1
+    class Comment
     {
+        private int UserID;
+        private int ImgID;
+        private string Text;
+
+        private Comment()
+        {
+
+        }
     }
 }
