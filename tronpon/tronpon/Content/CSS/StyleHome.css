@@ -1,2 +1,25 @@
 ﻿body {
+    background-color: #717C80;
+    padding: 0px;
+    margin: 0px;
+}
+
+.Homepage { /*'.'=class attribute*/
+    margin: auto;
+}
+
+#Homeimage { /*'#'=ID attribute*/
+    width: 400px;
+    height: 220px;
+}
+
+#HomeButtonGO {    
+    width: 100px;
+    height: 100px;
+}
+#ButtonGO{
+    background-image: url('../Images/ButtonGo.png');
+     width: 100px;
+    height: 100px;    
+    text-align:center;
 }

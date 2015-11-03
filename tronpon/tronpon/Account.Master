@@ -1,10 +1,9 @@
-﻿<%@ Master Language="C#"  MasterPageFile="~/Account.Master" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="tronpon.Main" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Account.master.cs" Inherits="tronpon.Account" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link type="text/css" rel="stylesheet" href="Content/CSS/StyleMaster.css" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
