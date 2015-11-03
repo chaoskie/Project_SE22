@@ -1,21 +1,16 @@
-﻿<%@ Master Language="C#"  MasterPageFile="~/Account.Master" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="tronpon.Main" %>
+﻿<%@ Master Language="C#" MasterPageFile="~/Account.Master" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="tronpon.Main" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<asp:Content runat="server" ID="Content1" ContentPlaceHolderID="HeadAcc">
     <link type="text/css" rel="stylesheet" href="Content/CSS/StyleMaster.css" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>
+<asp:Content runat="server" ID="Content2" ContentPlaceHolderID="BodyAcc">
+
+            <asp:ContentPlaceHolder ID="BodyMain" runat="server">
+            </asp:ContentPlaceHolder>
+    </asp:Content>
+
+
