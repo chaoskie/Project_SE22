@@ -66,6 +66,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\CSS\StyleHome.css" />
+    <Content Include="Content\CSS\StyleMaster.css" />
     <Content Include="Home.aspx" />
     <Content Include="Image.aspx" />
     <Content Include="ImageTiles.aspx" />
@@ -97,6 +99,7 @@
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
@@ -118,7 +121,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\CSS\" />
     <Folder Include="Content\Images\" />
     <Folder Include="Content\JS\" />
   </ItemGroup>
