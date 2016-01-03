@@ -74,6 +74,7 @@
     <Content Include="assets\js\main.js" />
     <Content Include="assets\js\skel.min.js" />
     <Content Include="assets\js\util.js" />
+    <Content Include="Authorisation\credentials.aspx" />
     <Content Include="ErrorPages\error.aspx" />
     <Content Include="ErrorPages\error403.aspx" />
     <Content Include="ErrorPages\error404.aspx" />
@@ -87,7 +88,6 @@
     <Content Include="images\pic06.jpg" />
     <Content Include="images\pic07.jpg" />
     <Content Include="images\pic08.jpg" />
-    <Content Include="Main.Master" />
     <Content Include="assets\fonts\fontawesome-webfont.eot" />
     <Content Include="assets\fonts\fontawesome-webfont.ttf" />
     <Content Include="assets\fonts\fontawesome-webfont.woff" />
@@ -112,6 +112,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authorisation\credentials.aspx.cs">
+      <DependentUpon>credentials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Authorisation\credentials.aspx.designer.cs">
+      <DependentUpon>credentials.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ErrorPages\error.aspx.cs">
       <DependentUpon>error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -147,16 +154,11 @@
     <Compile Include="ErrorPages\error500.aspx.designer.cs">
       <DependentUpon>error500.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Main.Master.cs">
-      <DependentUpon>Main.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Main.Master.designer.cs">
-      <DependentUpon>Main.Master</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Pages\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

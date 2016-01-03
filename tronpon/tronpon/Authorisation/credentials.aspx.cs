@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace tronpon
+namespace tronpon.Authorisation
 {
-    public partial class Main : System.Web.UI.MasterPage
+    public partial class credentials : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

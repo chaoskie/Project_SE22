@@ -40,8 +40,6 @@ namespace Tronpon_Classes
             //Add image to the database
             Image.AddImage(this.UserID, url);
 
-
-
             bool finished = false;
             errorMessage = "Nog niet afgemaakt!";
             return finished;
