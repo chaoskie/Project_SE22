@@ -57,8 +57,50 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\ie8.css" />
+    <Content Include="assets\css\ie9.css" />
+    <Content Include="assets\css\images\ie\grad0-15.svg" />
+    <Content Include="assets\css\images\overlay.png" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\js\ie\backgroundsize.min.htc" />
+    <Content Include="assets\js\ie\html5shiv.js" />
+    <Content Include="assets\js\ie\PIE.htc" />
+    <Content Include="assets\js\ie\respond.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\jquery.scrolly.min.js" />
+    <Content Include="assets\js\jquery.scrollzer.min.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\skel.min.js" />
+    <Content Include="assets\js\util.js" />
+    <Content Include="ErrorPages\error.aspx" />
+    <Content Include="ErrorPages\error403.aspx" />
+    <Content Include="ErrorPages\error404.aspx" />
+    <Content Include="ErrorPages\error500.aspx" />
+    <Content Include="images\avatar.jpg" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\pic02.jpg" />
+    <Content Include="images\pic03.jpg" />
+    <Content Include="images\pic04.jpg" />
+    <Content Include="images\pic05.jpg" />
+    <Content Include="images\pic06.jpg" />
+    <Content Include="images\pic07.jpg" />
+    <Content Include="images\pic08.jpg" />
     <Content Include="Main.Master" />
-    <Content Include="Account.Master" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\sass\libs\_functions.scss" />
+    <Content Include="assets\sass\libs\_mixins.scss" />
+    <Content Include="assets\sass\libs\_skel.scss" />
+    <Content Include="assets\sass\libs\_vars.scss" />
+    <Content Include="assets\sass\ie8.scss" />
+    <Content Include="assets\sass\ie9.scss" />
+    <Content Include="assets\sass\main.scss" />
+    <Content Include="ErrorPages\error.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -67,43 +109,43 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\CSS\StyleHome.css" />
-    <Content Include="Content\CSS\StyleMaster.css" />
-    <Content Include="Home.aspx" />
-    <Content Include="Image.aspx" />
-    <Content Include="ImageTiles.aspx" />
-    <Content Include="Search.aspx" />
-    <Content Include="User.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.Master.cs">
-      <DependentUpon>Account.Master</DependentUpon>
+    <Compile Include="ErrorPages\error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account.Master.designer.cs">
-      <DependentUpon>Account.Master</DependentUpon>
+    <Compile Include="ErrorPages\error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="ErrorPages\error.Master.cs">
+      <DependentUpon>error.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
+    <Compile Include="ErrorPages\error.Master.designer.cs">
+      <DependentUpon>error.Master</DependentUpon>
     </Compile>
-    <Compile Include="Image.aspx.cs">
-      <DependentUpon>Image.aspx</DependentUpon>
+    <Compile Include="ErrorPages\error403.aspx.cs">
+      <DependentUpon>error403.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Image.aspx.designer.cs">
-      <DependentUpon>Image.aspx</DependentUpon>
+    <Compile Include="ErrorPages\error403.aspx.designer.cs">
+      <DependentUpon>error403.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImageTiles.aspx.cs">
-      <DependentUpon>ImageTiles.aspx</DependentUpon>
+    <Compile Include="ErrorPages\error404.aspx.cs">
+      <DependentUpon>error404.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImageTiles.aspx.designer.cs">
-      <DependentUpon>ImageTiles.aspx</DependentUpon>
+    <Compile Include="ErrorPages\error404.aspx.designer.cs">
+      <DependentUpon>error404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPages\error500.aspx.cs">
+      <DependentUpon>error500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPages\error500.aspx.designer.cs">
+      <DependentUpon>error500.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
@@ -113,25 +155,8 @@
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Search.aspx.cs">
-      <DependentUpon>Search.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Search.aspx.designer.cs">
-      <DependentUpon>Search.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="User.aspx.cs">
-      <DependentUpon>User.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="User.aspx.designer.cs">
-      <DependentUpon>User.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\Images\" />
-    <Folder Include="Content\JS\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace tronpon {
+namespace tronpon.ErrorPages {
     
     
-    public partial class Main {
+    public partial class Error1 {
         
         /// <summary>
-        /// cpTitlePage control.
+        /// cpErrorType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cpTitlePage;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cpErrorType;
         
         /// <summary>
-        /// head control.
+        /// cpErrorHead control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cpErrorHead;
         
         /// <summary>
-        /// BodyMain control.
+        /// cpErrorBody control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder BodyMain;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cpErrorBody;
     }
 }
