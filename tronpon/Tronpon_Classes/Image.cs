@@ -28,7 +28,7 @@ namespace Tronpon_Classes
             return new List<Image>();
         }
 
-        public Image AddImage(int userID, string url)
+        public static Image AddImage(int userID, string url)
         {
             //TODO: fire an insert query at the database, adding the new image
             return new Image(userID, url);
