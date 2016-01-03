@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tronpon.Tests", "tronpon.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tronpon_Classes", "Tronpon_Classes\Tronpon_Classes.csproj", "{47E82CF2-866A-4C6C-ADF6-4503042E2252}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database_Layer", "Database_Layer\Database_Layer.csproj", "{E9F92BF4-AEB0-4A19-81C1-ADA26662A5F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{47E82CF2-866A-4C6C-ADF6-4503042E2252}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47E82CF2-866A-4C6C-ADF6-4503042E2252}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47E82CF2-866A-4C6C-ADF6-4503042E2252}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9F92BF4-AEB0-4A19-81C1-ADA26662A5F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9F92BF4-AEB0-4A19-81C1-ADA26662A5F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9F92BF4-AEB0-4A19-81C1-ADA26662A5F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9F92BF4-AEB0-4A19-81C1-ADA26662A5F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
