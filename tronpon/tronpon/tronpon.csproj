@@ -129,7 +129,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="assets\" />
     <Folder Include="Content\Images\" />
     <Folder Include="Content\JS\" />
   </ItemGroup>
