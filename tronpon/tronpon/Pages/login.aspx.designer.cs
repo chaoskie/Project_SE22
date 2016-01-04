@@ -11,7 +11,7 @@ namespace tronpon.Pages
 {
 
 
-    public partial class Home
+    public partial class login
     {
     }
 }
