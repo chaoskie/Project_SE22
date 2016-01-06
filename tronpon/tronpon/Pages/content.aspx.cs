@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using Database_Layer;
+using GUI_Handler;
 
 namespace tronpon.Pages
 {
@@ -17,10 +17,8 @@ namespace tronpon.Pages
             pageNumber = Convert.ToInt32(Request.QueryString["page"]);
             int lowerLimit = pageNumber * 9;
             int maxLimit = (pageNumber + 1) * 9;
+            //List<object> content = Handler.GetContent(maxLimit, lowerLimit); Rowan plz help
 
-            DataTable dt = Database.RetrieveQuery("SELECT \"URL\", rn FROM (SELECT \"URL\", rownum as rn FROM \"Image\" WHERE rn < " +
-                maxLimit + ") WHERE rn > " + lowerLimit);
-            //TODO CHECK ME!
         }
 
         protected void btnPrevPage_Click(object sender, EventArgs e)

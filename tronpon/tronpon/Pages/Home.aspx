@@ -21,6 +21,7 @@
             </p>
             <ul class="actions">
                 <li><a href="https://en.wikipedia.org/wiki/Wikipedia:Image_use_policy" target="_blank" class="button">Learn More</a></li>
+                <li><a href="upload.aspx" class="button special">Upload content</a></li>
             </ul>
         </section>
 

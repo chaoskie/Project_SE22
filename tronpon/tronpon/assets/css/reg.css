@@ -1,0 +1,18 @@
+﻿.display-inline {
+    height: 50px;
+}
+
+.display-inline p{
+    display: inline-block;
+    margin: 0 0 0 0;
+    width: 150px;
+}
+.display-inline input[type="text"]{
+    display: inline-block;
+    width: 350px;
+}
+
+.display-inline input[type="password"]{
+    display: inline-block;
+    width: 350px;
+}

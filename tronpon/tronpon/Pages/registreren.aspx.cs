@@ -11,7 +11,11 @@ namespace tronpon.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            btnRegister.Click +=btnRegister_Click;
+        }
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+           //make new user
         }
     }
 }

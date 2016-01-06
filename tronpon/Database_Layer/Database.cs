@@ -259,6 +259,28 @@ namespace Database_Layer
                 return true;
             }
         }
+        public static bool InsertImage(int USER_ID, string URL)
+        {
+            using (OracleConnection c = new OracleConnection(@connectionstring))
+            {
+                c.Open();
+                OracleCommand cmd = new OracleCommand("INSERT INTO \"Image\" (\"USER_ID\", \"URL\") VALUES (:UI, :URL)");
+                cmd.Parameters.Add(new OracleParameter("UI", USER_ID));
+                cmd.Parameters.Add(new OracleParameter("URL", URL));
+                cmd.Connection = c;
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (OracleException e)
+                {
+                    Console.WriteLine(e.Message);
+                    return false;
+                }
+                c.Close();
+                return true;
+            }
+        }
 
         public static bool DeleteImage(int ID, string URL)
         {

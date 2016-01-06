@@ -9,7 +9,9 @@
 
         <section id="content">
             <h4>Content</h4>
-
+             <ul class="actions">                
+                <li><a href="upload.aspx" class="button special">Upload</a></li>                                
+            </ul>
             <div class="box alt">
                 <div class="row 50% uniform">
                        <article class="8u$ work-item">

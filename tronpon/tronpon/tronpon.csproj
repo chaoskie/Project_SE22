@@ -61,6 +61,7 @@
     <Content Include="assets\css\ie8.css" />
     <Content Include="assets\css\images\overlay.png" />
     <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\reg.css" />
     <Content Include="assets\fonts\fontawesome-webfont.svg" />
     <Content Include="assets\js\ie\backgroundsize.min.htc" />
     <Content Include="assets\js\ie\html5shiv.js" />
@@ -214,9 +215,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Database_Layer\Database_Layer.csproj">
-      <Project>{e9f92bf4-aeb0-4a19-81c1-ada26662a5f1}</Project>
-      <Name>Database_Layer</Name>
+    <ProjectReference Include="..\GUI_Handler\GUI_Handler.csproj">
+      <Project>{45bfc520-a354-4187-993b-edc0b6fae974}</Project>
+      <Name>GUI_Handler</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
