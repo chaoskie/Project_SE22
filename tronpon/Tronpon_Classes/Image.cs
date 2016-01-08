@@ -10,7 +10,7 @@ namespace Tronpon_Classes
 {
     public class Image : IComparer<Image>
     {
-        private int ID;
+        public int ID;
         public string URL;
         private string desc;
 
@@ -34,11 +34,11 @@ namespace Tronpon_Classes
         public static List<Image> LoadPageContent(int max, int min)
         {
             List<Image> images = new List<Image>();
-            DataTable content = Database.RetrieveQuery("SELECT \"URL\", rn FROM (SELECT \"URL\", rownum as rn FROM \"Image\" WHERE rn < " +
-                max + ") WHERE rn > " + min);
+            DataTable content = Database.RetrieveQuery("SELECT \"URL\", \"ID\", rn FROM (SELECT \"URL\", \"ID\", rownum as rn FROM \"Image\" WHERE rownum < " +
+                max + ") WHERE rownum > " + min);
             foreach (DataRow dr in content.Rows)
             {
-                images.Add(new Image((int)dr["USER_ID"], (string)dr["URL"]));
+                images.Add(new Image(Convert.ToInt32(dr["ID"]), dr["URL"].ToString()));
             }
             return images;
         }

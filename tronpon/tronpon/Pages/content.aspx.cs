@@ -36,14 +36,17 @@ namespace tronpon.Pages
         {
             for (int i = 1; i < 10; i++)
             {
-                string contextIndex = content[i - 1];
-
-                if (!String.IsNullOrWhiteSpace(contextIndex))
+                if (content.Count >= i)
                 {
-                    HtmlAnchor imgOb = (HtmlAnchor)Page.FindControl("imageOutboundUrl" + i);
-                    imgOb.HRef = contextIndex;
-                    HtmlImage img = (HtmlImage)Page.FindControl("image" + i);
-                    img.Src = contextIndex;
+                    string contextIndex = content[i - 1];
+
+                    if (!String.IsNullOrWhiteSpace(contextIndex))
+                    {
+                        HtmlAnchor imgOb = (HtmlAnchor)ImageHolder.FindControl("imageOutboundUrl" + i);
+                        imgOb.HRef = contextIndex;
+                        HtmlImage img = (HtmlImage)imgOb.FindControl("image" + i);
+                        img.Src = contextIndex;
+                    }
                 }
             }
         }

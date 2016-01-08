@@ -13,7 +13,7 @@
                 <li><a href="upload.aspx" class="button special">Upload</a></li>                                
             </ul>
             <div class="box alt">
-                <div class="row 50% uniform">
+                <div class="row 50% uniform" id="ImageHolder" runat="server">
                        <article class="8u$ work-item">
                         <a href="../images/fulls/01.jpg" id="imageOutboundUrl1" runat="server" target="_blank" class="image fit thumb">
                             <img src="../images/thumbs/05.jpg" id="image1" runat="server" alt="" /></a>
