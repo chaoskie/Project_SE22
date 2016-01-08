@@ -11,7 +11,7 @@ namespace Tronpon_Classes
     public class Image : IComparer<Image>
     {
         private int ID;
-        private string URL;
+        public string URL;
         private string desc;
 
         private Image(int id, string url)

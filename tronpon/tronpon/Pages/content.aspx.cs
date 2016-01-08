@@ -17,8 +17,7 @@ namespace tronpon.Pages
             pageNumber = Convert.ToInt32(Request.QueryString["page"]);
             int lowerLimit = pageNumber * 9;
             int maxLimit = (pageNumber + 1) * 9;
-            //List<object> content = Handler.GetContent(maxLimit, lowerLimit); Rowan plz help
-
+            List<string> content = Handler.GetContent(maxLimit, lowerLimit);
         }
 
         protected void btnPrevPage_Click(object sender, EventArgs e)
@@ -29,6 +28,12 @@ namespace tronpon.Pages
         protected void btnNextPage_Click(object sender, EventArgs e)
         {
             Response.Redirect("content.aspx?page=" + (pageNumber + 1), false);
+        }
+
+        public void VisualizeContent(List<string> content)
+        {
+            imageOutboundUrl1.HRef = content[0];
+            image1.Src = content[0];
         }
     }
 }

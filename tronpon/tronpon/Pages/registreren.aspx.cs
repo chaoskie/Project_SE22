@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using GUI_Handler;
 
 namespace tronpon.Pages
 {
@@ -15,7 +16,7 @@ namespace tronpon.Pages
         }
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-           //make new user
+           
         }
     }
 }

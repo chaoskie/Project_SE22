@@ -23,9 +23,12 @@ namespace Tronpon_Classes
             this.Name = name;
             this.Email = email;
 
+            /* TODO
             ListFavourites = Favourite.GetUserFavourites(this.UserID);
             ListImages = Image.GetUserImages(this.UserID);
             ListOwnComments = Comment.GetUserComments(this.UserID);
+             */
+
         }
 
         /// <summary>
