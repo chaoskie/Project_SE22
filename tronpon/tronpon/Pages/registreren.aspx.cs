@@ -20,7 +20,7 @@ namespace tronpon.Pages
             if (Handler.RegisterUser(tbUname.Text, tbMail.Text, tbPass.Text))
             {
                 Handler.LoginUser(tbUname.Text, tbPass.Text);
-
+                EmailHandler.SendRegistration(tbMail.Text, tbUname.Text);                
                 Response.Redirect("Home.aspx", false);
                 //succes
             }
