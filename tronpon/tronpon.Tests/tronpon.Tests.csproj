@@ -56,6 +56,10 @@
       <Project>{F5093E60-0F7D-48E7-9107-BDBF1188E772}</Project>
       <Name>tronpon</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Tronpon_Classes\Tronpon_Classes.csproj">
+      <Project>{47e82cf2-866a-4c6c-adf6-4503042e2252}</Project>
+      <Name>Tronpon_Classes</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
