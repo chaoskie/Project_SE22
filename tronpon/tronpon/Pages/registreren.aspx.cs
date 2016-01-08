@@ -14,6 +14,7 @@ namespace tronpon.Pages
         {
             btnRegister.Click +=btnRegister_Click;
         }
+
         protected void btnRegister_Click(object sender, EventArgs e)
         {
             if (Handler.RegisterUser(tbUname.Text, tbMail.Text, tbPass.Text))

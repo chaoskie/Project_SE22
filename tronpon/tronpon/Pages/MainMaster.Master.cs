@@ -12,7 +12,7 @@ namespace tronpon.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Handler.isUserLoggedIn())
+            if (Handler.isUserLoggedIn())//check if the user is already logged in
             {
                 btnLog.InnerText = "Logout";
                 btnLog.ServerClick += btnLog_ServerClick;

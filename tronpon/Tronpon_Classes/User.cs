@@ -10,6 +10,7 @@ namespace Tronpon_Classes
 {
     public class User
     {
+        //fields
         public List<Image> ListImages;
         public List<Favourite> ListFavourites;
         public List<Comment> ListOwnComments;
@@ -18,7 +19,7 @@ namespace Tronpon_Classes
         public string Name;
         public string Email;
 
-
+        //constructor
         public User(int id, string name, string email)
         {
             this.UserID = id;
@@ -31,17 +32,26 @@ namespace Tronpon_Classes
             ListOwnComments = Comment.GetUserComments(this.UserID);
              */
         }
+        //methods
 
+        /// <summary>
+        /// login a user
+        /// </summary>
+        /// <param name="username">username of the user</param>
+        /// <param name="password">password of the user</param>
+        /// <param name="user">user object that is being returned to start session</param>
+        /// <returns>succes boolean</returns>
         public static bool Login(string username, string password, out User user)
         {
             user = null;
             int ID;
             if (GetUserID(username, out ID))
-            { 
+            { //ophalen van de usergegevens
                 DataTable dt = Database.RetrieveQuery("SELECT * FROM \"User\" WHERE \"ID\" = " + ID);
                 user = new User(Convert.ToInt32(dt.Rows[0]["ID"]),
                     dt.Rows[0]["Username"].ToString(),
                     dt.Rows[0]["Email"].ToString());
+                //password validation
                 return PasswordHash.ValidatePassword(password, dt.Rows[0]["PassHash"].ToString());
             }
             else
@@ -49,7 +59,7 @@ namespace Tronpon_Classes
                 return false;
             }
         }
-
+        #region obsolete code
         /// <summary>
         /// Uploads an image to the server and adds a reference to the database
         /// </summary>
@@ -58,16 +68,14 @@ namespace Tronpon_Classes
         /// <returns>Whether there has been an error or not</returns>
         public bool UploadImage(string url, out string errorMessage)
         {
-            //TODO: Download image to server
-
-            //Add image to the database
+            //nobsolete code due to newer upload version
             Image.AddImage(this.UserID, url);
 
             bool finished = false;
             errorMessage = "Nog niet afgemaakt!";
             return finished;
         }
-
+        #endregion
         /// <summary>
         /// Adds a comment to the referenced image
         /// </summary>
@@ -79,6 +87,7 @@ namespace Tronpon_Classes
             ListOwnComments.Add(new Comment(this.UserID, imageID, text));
             return Comment.PostComment(this.UserID, imageID, text);
         }
+
         /// <summary>
         /// method to fetch the user ID
         /// </summary>

@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Tronpon_Classes
 {
-   public class Favourite
+    public class Favourite
     {
+        //fields
         private int UserID;
         private int ImageID;
 
+        //constructor
         private Favourite(int userid, int imageID)
         {
             this.UserID = userid;
@@ -24,7 +26,7 @@ namespace Tronpon_Classes
         /// <returns>A list of all the favourites</returns>
         public static List<Favourite> GetUserFavourites(int userid)
         {
-            //TODO: fire a query at the database, yielding all the results for favourites
+            //TODO: haal user favorieten op uit database
             return new List<Favourite>();
         }
     }

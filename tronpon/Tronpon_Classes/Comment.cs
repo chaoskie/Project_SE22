@@ -8,16 +8,20 @@ namespace Tronpon_Classes
 {
     public class Comment
     {
+        //fields
         private int UserID;
         private int ImgID;
         private string Text;
 
+        //constructor
         public Comment(int userid, int imgid, string text)
         {
             this.UserID = userid;
             this.ImgID = imgid;
             this.Text = text;
         }
+
+        //methods
 
         /// <summary>
         /// Retrieves all the user comments through the User's ID
@@ -26,13 +30,15 @@ namespace Tronpon_Classes
         /// <returns>A list of all the comments</returns>
         public static List<Comment> GetUserComments(int userid)
         {
-            //TODO: fire a query at the database, yielding all the results for favourites
+            //TODO: ophalen van user comments via database
+            //niet toegevoegd in huidige versie
             return new List<Comment>();
         }
 
         public static bool PostComment(int userid, int imgid, string text)
         {
-            //TODO: fire an insert query at the database, adding the new comment
+            //TODO: insert comment in database
+            //niet toegevoegd in huidige versie
             return true;
         }
     }
