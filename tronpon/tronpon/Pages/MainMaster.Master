@@ -18,7 +18,7 @@
         <!-- Header -->
         <header id="header">
             <ul class="actions">                
-                <li><a href="login.aspx" class="button special">Login</a></li>
+                <li><a href="login.aspx" id="btnLog" runat="server" class="button special">Login</a></li>
                 <li><a href="registreren.aspx" class="button special">Registreren</a></li>                
             </ul>
             <a href="home.aspx" class="image avatar">

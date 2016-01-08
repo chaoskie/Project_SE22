@@ -156,11 +156,35 @@ namespace Database_Layer
 
         #region User
 
+        public static DataTable GetUserID(string Uname)
+        {
+            using (OracleConnection c = new OracleConnection(@connectionstring))
+            {
+                c.Open();
+                OracleCommand cmd = new OracleCommand("SELECT \"ID\" FROM \"User\" WHERE \"Username\" = :un");
+                cmd.Parameters.Add(new OracleParameter("un", Uname));
+                cmd.Connection = c;
+                try
+                {
+                    OracleDataReader r = cmd.ExecuteReader();
+                    DataTable result = new DataTable();
+                    result.Load(r);
+                    c.Close();
+                    return result;
+                }
+                catch (OracleException e)
+                {
+                    Console.Write(e.Message);
+                    return new DataTable();
+                }
+            }
+        }
+
         public static bool InsertUser(string Username, string PassHash, string Email)
         {
             using (OracleConnection c = new OracleConnection(@connectionstring))
             {
-
+                c.Open();
                 OracleCommand cmd = new OracleCommand("INSERT INTO \"User\" (\"Username\" ,\"Email\" ,\"PassHash\") VALUES(:un, :em, :ph)");
 
                 cmd.Parameters.Add(new OracleParameter("un", Username));

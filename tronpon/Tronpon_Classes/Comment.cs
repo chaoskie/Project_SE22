@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tronpon_Classes
 {
-    class Comment
+    public class Comment
     {
         private int UserID;
         private int ImgID;

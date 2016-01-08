@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tronpon_Classes
 {
-    class Tags
+    public class Tags
     {
     }
 }

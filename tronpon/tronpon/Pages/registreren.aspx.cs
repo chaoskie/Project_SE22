@@ -16,7 +16,18 @@ namespace tronpon.Pages
         }
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-           
+            if (Handler.RegisterUser(tbUname.Text, tbMail.Text, tbPass.Text))
+            {
+                Handler.LoginUser(tbUname.Text, tbPass.Text);
+
+                Response.Redirect("Home.aspx", false);
+                //succes
+            }
+            else
+            {
+                Response.Write("<script>alert('Helaas is uw registratie niet voltooid, probeer het later nog eens.');</script>");
+                //fail
+            }
         }
     }
 }

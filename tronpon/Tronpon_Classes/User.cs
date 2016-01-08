@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Database_Layer;
+using System.Data;
 
 namespace Tronpon_Classes
 {
-    class User
+    public class User
     {
         public List<Image> ListImages;
         public List<Favourite> ListFavourites;
@@ -28,7 +30,24 @@ namespace Tronpon_Classes
             ListImages = Image.GetUserImages(this.UserID);
             ListOwnComments = Comment.GetUserComments(this.UserID);
              */
+        }
 
+        public static bool Login(string username, string password, out User user)
+        {
+            user = null;
+            int ID;
+            if (GetUserID(username, out ID))
+            { 
+                DataTable dt = Database.RetrieveQuery("SELECT * FROM \"User\" WHERE \"ID\" = " + ID);
+                user = new User(Convert.ToInt32(dt.Rows[0]["ID"]),
+                    dt.Rows[0]["Username"].ToString(),
+                    dt.Rows[0]["Email"].ToString());
+                return PasswordHash.ValidatePassword(password, dt.Rows[0]["PassHash"].ToString());
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -59,6 +78,22 @@ namespace Tronpon_Classes
         {
             ListOwnComments.Add(new Comment(this.UserID, imageID, text));
             return Comment.PostComment(this.UserID, imageID, text);
+        }
+        /// <summary>
+        /// method to fetch the user ID
+        /// </summary>
+        /// <param name="username">username to find the id of</param>
+        /// <returns>the ID of the user</returns>
+        public static bool GetUserID(string username, out int result)
+        {
+            DataTable dt = Database.GetUserID(username);
+            if (dt.Rows.Count > 0)
+            {
+                result = Convert.ToInt32(dt.Rows[0]["ID"]);
+                return true;
+            }
+            result = -1;
+            return false;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tronpon_Classes
 {
-    class Favourite
+   public class Favourite
     {
         private int UserID;
         private int ImageID;

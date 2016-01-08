@@ -18,6 +18,7 @@
 						Wil je graag weten welke afbeeldingen wel en niet toegestaan zijn dan nodigen we je uit om op onderstaande knop te drukken om meer te weten te komen.
 						<br />
                 Happy searching!
+                <br />(let op, deze website maakt gebruik van javascript)
             </p>
             <ul class="actions">
                 <li><a href="https://en.wikipedia.org/wiki/Wikipedia:Image_use_policy" target="_blank" class="button">Learn More</a></li>
