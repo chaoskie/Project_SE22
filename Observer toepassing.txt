@@ -1,0 +1,7 @@
+Het gebruik van Observer in de tronpon applicatie.
+
+Een gebruiker zou een afbeelding aan favorieten kunnen toevoegen, 
+vervolgens kan ik controleren welke de meest voorkomende tags zijn 
+die gekoppeld worden aan de afbeeldingen die hij als favoriet ziet. 
+Ik zou dan een melding kunnen geven wanneer er een afbeelding wordt 
+geupload die een van zijn favoriete tags bevat.

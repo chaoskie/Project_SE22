@@ -12,10 +12,19 @@ namespace tronpon.Pages
 {
     public partial class content : System.Web.UI.Page
     {
-        int pageNumber = 0;
+        static int pageNumber;
         protected void Page_Load(object sender, EventArgs e)
         {
-            pageNumber = Convert.ToInt32(Request.QueryString["page"]);
+            if (Request.QueryString["page"] == null)
+            {
+                pageNumber = 0;
+            }
+            else if (int.TryParse(Request.QueryString["page"], out pageNumber))
+            {
+                
+            }
+            if (pageNumber < 0) pageNumber = 0;
+
             int lowerLimit = pageNumber * 9;
             int maxLimit = (pageNumber + 1) * 9;
             List<string> content = Handler.GetContent(maxLimit, lowerLimit);
