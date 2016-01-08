@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 using System.Data;
 using GUI_Handler;
 
@@ -18,6 +19,7 @@ namespace tronpon.Pages
             int lowerLimit = pageNumber * 9;
             int maxLimit = (pageNumber + 1) * 9;
             List<string> content = Handler.GetContent(maxLimit, lowerLimit);
+            VisualizeContent(content);
         }
 
         protected void btnPrevPage_Click(object sender, EventArgs e)
@@ -32,8 +34,18 @@ namespace tronpon.Pages
 
         public void VisualizeContent(List<string> content)
         {
-            imageOutboundUrl1.HRef = content[0];
-            image1.Src = content[0];
+            for (int i = 1; i < 10; i++)
+            {
+                string contextIndex = content[i - 1];
+
+                if (!String.IsNullOrWhiteSpace(contextIndex))
+                {
+                    HtmlAnchor imgOb = (HtmlAnchor)Page.FindControl("imageOutboundUrl" + i);
+                    imgOb.HRef = contextIndex;
+                    HtmlImage img = (HtmlImage)Page.FindControl("image" + i);
+                    img.Src = contextIndex;
+                }
+            }
         }
     }
 }
