@@ -12,7 +12,10 @@ namespace GUI_Handler
 {
     public class Handler
     {
+        //fields
         private static User mainuser;
+
+        //getters - setters
         public static User MainUser
         {
             get
@@ -25,7 +28,14 @@ namespace GUI_Handler
             }
         }
 
+        //methods
 
+        /// <summary>
+        /// Retrieve content from database
+        /// </summary>
+        /// <param name="max">maximum images</param>
+        /// <param name="min">minimum images</param>
+        /// <returns></returns>
         public static List<string> GetContent(int max, int min)
         {
             return Tronpon_Classes.Image.LoadPageContent(max, min).Select(i => String.Format("{0}{1}{2}", @"..\..\images\uploads\", i.ID, i.URL)).ToList();
@@ -87,23 +97,39 @@ namespace GUI_Handler
             MainUser = mainuser;
             return succ;
         }
+        /// <summary>
+        /// User logout, set mainuser to null
+        /// </summary>
         public static void LogoutUser()
         {
             mainuser = null;
         }
-
+        /// <summary>
+        /// verify that user is logged in
+        /// </summary>
+        /// <returns></returns>
         public static bool isUserLoggedIn()
         {
             return MainUser == null ? false : true;
         }
 
+        /// <summary>
+        /// retrieve last uploaded image by this user
+        /// </summary>
+        /// <param name="userID">id of the user</param>
+        /// <returns>id of the image in string</returns>
         public static string GetLastUpload(int? userID = null)
         {
             int posterid = userID == null ? MainUser.UserID : (int)userID;
             DataTable dt = Database.RetrieveQuery("SELECT MAX(\"ID\") as id FROM \"Image\" WHERE \"USER_ID\" = " + posterid);
             return dt.Rows[0]["id"].ToString();
         }
-
+        /// <summary>
+        /// insert an image into the database
+        /// </summary>
+        /// <param name="f">file upload entity that needs to be placed in the server</param>
+        /// <param name="message">error message</param>
+        /// <returns>succes boolean</returns>
         public static bool InsertImage(System.Web.UI.WebControls.FileUpload f, out string message)
         {
 
@@ -155,7 +181,7 @@ namespace GUI_Handler
             if ((ext.ToLower() != ".jpg") && (ext.ToLower() != ".jpeg") && (ext.ToLower() != ".gif") && (ext.ToLower() != ".png"))
             {
                 message = "bestandstype niet ondersteund";
-                return false;
+                //return false;
             }
             string appPath = System.Web.HttpContext.Current.Request.ApplicationPath;
             string physicalPath = System.Web.HttpContext.Current.Request.MapPath(appPath);
