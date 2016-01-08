@@ -29,30 +29,30 @@
         <!-- Two -->
         <section id="two">
             <h2>Recente uploads</h2>
-            <div class="row">
+            <div class="row" id="ImageHolder"  runat="server">
                 <article class="6u 12u$(xsmall) work-item">
-                    <a href="../images/fulls/01.jpg" class="image fit thumb">
-                        <img src="../images/thumbs/01.jpg" alt="" /></a>
+                    <a href="../images/fulls/01.jpg" id="imageOutboundUrl1" runat="server" class="image fit thumb">
+                        <img src="../images/thumbs/01.jpg" alt="" id="image1" runat="server" /></a>
                 </article>
                 <article class="6u$ 12u$(xsmall) work-item">
-                    <a href="../images/fulls/02.jpg" class="image fit thumb">
-                        <img src="../images/thumbs/02.jpg" alt="" /></a>
+                    <a href="../images/fulls/02.jpg" id="imageOutboundUrl2" runat="server" class="image fit thumb">
+                        <img src="../images/thumbs/02.jpg" alt="" id="image2" runat="server" /></a>
                 </article>
                 <article class="6u 12u$(xsmall) work-item">
-                    <a href="../images/fulls/03.jpg" class="image fit thumb">
-                        <img src="../images/thumbs/03.jpg" alt="" /></a>
+                    <a href="../images/fulls/03.jpg" id="imageOutboundUrl3" runat="server" class="image fit thumb">
+                        <img src="../images/thumbs/03.jpg" alt="" id="image3" runat="server"/></a>
                 </article>
                 <article class="6u$ 12u$(xsmall) work-item">
-                    <a href="../images/fulls/04.jpg" class="image fit thumb">
-                        <img src="../images/thumbs/04.jpg" alt="" /></a>
+                    <a href="../images/fulls/04.jpg" id="imageOutboundUrl4" runat="server" class="image fit thumb">
+                        <img src="../images/thumbs/04.jpg" alt="" id="image4" runat="server"/></a>
                 </article>
                 <article class="6u 12u$(xsmall) work-item">
-                    <a href="../images/fulls/05.jpg" class="image fit thumb">
-                        <img src="../images/thumbs/05.jpg" alt="" /></a>
+                    <a href="../images/fulls/05.jpg" id="imageOutboundUrl5" runat="server" class="image fit thumb">
+                        <img src="../images/thumbs/05.jpg" alt="" id="image5" runat="server"/></a>
                 </article>
                 <article class="6u$ 12u$(xsmall) work-item">
-                    <a href="../images/fulls/06.jpg" class="image fit thumb">
-                        <img src="../images/thumbs/06.jpg" alt="" /></a>
+                    <a href="../images/fulls/06.jpg" id="imageOutboundUrl6" runat="server" class="image fit thumb">
+                        <img src="../images/thumbs/06.jpg" alt="" id="image6" runat="server"/></a>
                 </article>
             </div>
             <ul class="actions">
